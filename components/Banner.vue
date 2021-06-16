@@ -2,7 +2,7 @@
     <div class="banner">
         <div class="banner-button-container">
           <a href="#">
-            <button>postimees pluss</button>
+            <button v-on:click.prevent>postimees pluss</button>
             <span class="current-date">{{currentDateTime}}</span>
           </a>
         </div>
@@ -199,14 +199,31 @@ export default {
     .banner-button-container {
       position: relative;
       top: 0;
-      display: flex;
-      justify-content: center;
+      left: 0;
+      margin: 0 auto;
     }
 
     .banner-button-container button {
       padding-left: 0;
     }
   }
+
+  @media screen and (orientation: landscape) and (max-height: 710px) and (min-width: 1000px) and (max-width: 1501px) {
+    .banner {
+      padding-top: 50px;
+    }
+    .banner-button-container {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+
+    .banner-button-container button {
+      padding-left: 0;
+    }
+  }
+
   @media screen and (orientation: portrait){
     .banner {
       background-image: url('@/static/banner_vertical.jpg');

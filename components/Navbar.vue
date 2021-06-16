@@ -26,7 +26,7 @@
                     <li class="nav-item d-flex flex-column justify-content-center mx-2"><a :href="'mailto:' + email"><img src="@/static/Email.png" alt="E-mail"></a></li>
                     <li class="nav-item d-flex flex-column justify-content-center border-end border-1 border-white">
                       <div class="px-4">
-                        <a href="#">
+                        <a href="#" v-on:click.prevent>
                           <img class="mx-1" src="@/static/jutumull.png" alt="E-mail">
                           <span class="navbar-text">88</span>
                         </a>

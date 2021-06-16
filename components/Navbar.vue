@@ -43,11 +43,7 @@
 </template>
 
 <script>
-import Logo from './Logo.vue'
 export default {
-    components: {
-        Logo
-    },
     props: ['facebook', 'twitter', 'email', 'domain']
 }
 </script>
@@ -161,9 +157,9 @@ export default {
       }
     }
 
-    @media screen and (max-width: 480px) and (orientation: portrait) {
+    @media screen and (max-width: 480px) {
       .navbar-brand {
-        padding: 8px;
+        display: none !important;
       }
 
       .button-container {

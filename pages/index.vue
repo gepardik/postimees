@@ -1,11 +1,5 @@
 <template>
   <div>
-      <Navbar
-        :facebook="social.facebook"
-        :twitter="social.twitter"
-        :email="email"
-        :domain="domain"
-      />
       <Banner />
       <Article
         v-for="(article, index) of articles"
@@ -20,7 +14,6 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
 import Banner from '@/components/Banner'
 import Article from '@/components/NewsArticle'
 
@@ -58,7 +51,6 @@ export default {
       }
     },
     components: {
-      Navbar,
       Banner,
       Article
     },

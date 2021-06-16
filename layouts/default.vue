@@ -1,12 +1,41 @@
 <template>
   <div>
+    <Navbar
+      :facebook="social.facebook"
+      :twitter="social.twitter"
+      :email="email"
+      :domain="domain"
+    />
     <Nuxt />
   </div>
 </template>
 
 <script>
-export default {
+import Navbar from '@/components/Navbar'
 
+export default {
+  async fetch({store}) {
+    if (store.getters.section === null) {
+      await store.dispatch('fetchSection')
+    }
+  },
+  computed: {
+    section() {
+      return this.$store.getters.section
+    },
+    domain() {
+      return this.section.domain
+    },
+    social() {
+      return this.section.meta.social
+    },
+    email() {
+      return this.section.editor.email
+    }
+  },
+  components: {
+    Navbar
+  }
 }
 </script>
 

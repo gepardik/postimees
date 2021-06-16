@@ -455,4 +455,10 @@ a.headline:hover {
     height: 70px;
   }
 }
+
+@media screen and (max-height: 300px) and (orientation: landscape){
+  .article-number-mobile {
+    right: 0;
+  }
+}
 </style>

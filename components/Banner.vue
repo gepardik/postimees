@@ -48,7 +48,7 @@ export default {
       text-align: center;
       height: 100vh;
       overflow: hidden!important;
-    padding: 80px;
+      padding: 80px 80px 0 80px;
   }
   .banner-title {
       font-family: 'Tabac Sans';
@@ -57,8 +57,6 @@ export default {
       color: #fff;
       font-weight: bold;
       display: inline;
-      margin-left: auto;
-      margin-right: auto;
       z-index: 10;
   }
 
@@ -132,8 +130,6 @@ export default {
     .banner-title {
       font-size: 65px;
       line-height: 80px;
-      margin-left: 100px;
-      margin-right: 100px;
     }
   }
 
@@ -160,6 +156,15 @@ export default {
   }
 
   @media screen and (max-width: 900px) and (orientation: landscape) {
+    .banner-button-container {
+      top: 70px;
+    }
+
+    .banner {
+      padding-top: 84px;
+      padding-bottom: 0;
+    }
+
     .banner-title {
       font-size: 38px;
       line-height: 46px;
@@ -169,7 +174,6 @@ export default {
   @media screen and (max-width: 800px) and (orientation: landscape) {
     .banner {
       padding-top: 80px;
-      padding-bottom: 20px;
     }
     .banner-title {
       font-size: 28px;
@@ -179,7 +183,7 @@ export default {
 
   @media screen and (max-width: 700px) and (orientation: landscape) {
     .banner-button-container {
-      margin-top: 10px;
+      top: 50px;
     }
 
     .banner-title {
@@ -188,6 +192,21 @@ export default {
     }
   }
 
+  @media screen and (max-width: 600px){
+    .banner {
+      padding-top: 50px;
+    }
+    .banner-button-container {
+      position: relative;
+      top: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .banner-button-container button {
+      padding-left: 0;
+    }
+  }
   @media screen and (orientation: portrait){
     .banner {
       background-image: url('@/static/banner_vertical.jpg');
@@ -226,14 +245,9 @@ export default {
   }
 
   @media screen and (max-width: 480px) and (orientation: portrait) {
-    .banner-button-container {
-      top: 50px;
-    }
     .banner-title {
       font-size: 28px;
       line-height: 36px;
-      margin-left: 10px;
-      margin-right: 10px;
     }
   }
 
@@ -241,9 +255,6 @@ export default {
     .banner {
       padding-right: 10px;
       padding-left: 10px;
-    }
-    .banner-button-container {
-      top: 50px;
     }
 
     .banner-button-container button {
@@ -253,8 +264,6 @@ export default {
     .banner-title {
       font-size: 28px;
       line-height: 34px;
-      margin-left: 20px;
-      margin-right: 20px;
     }
   }
 </style>

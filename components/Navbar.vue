@@ -54,6 +54,8 @@ export default {
 
 <style scoped>
     .navbar {
+        position: absolute;
+        width: 100%;
         background-color: #1ba6e2;
         vertical-align: middle;
         z-index: 100;

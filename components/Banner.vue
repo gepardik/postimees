@@ -7,7 +7,9 @@
           </a>
         </div>
         <span class="banner-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, officiis.</span>
-        <div class="arrow-down" @click="scroll"></div>
+        <div class="arrow-down-container">
+          <div class="arrow-down" @click="scroll"></div>
+        </div>
         <div class="overlay"></div>
     </div>
 
@@ -38,13 +40,15 @@ export default {
 <style scoped>
   .banner {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-evenly;
       background-image: url('@/static/banner.jpg');
       background-position-x: center;
       background-size: contain;
       text-align: center;
       height: 100vh;
-    overflow: hidden!important;
+      overflow: hidden!important;
+    padding: 80px;
   }
   .banner-title {
       font-family: 'Tabac Sans';
@@ -53,20 +57,23 @@ export default {
       color: #fff;
       font-weight: bold;
       display: inline;
-      width: 1313px;
-      margin-top: 448px;
       margin-left: auto;
       margin-right: auto;
       z-index: 10;
   }
 
+  .arrow-down-container {
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .arrow-down {
       cursor: pointer;
-      position: absolute;
       bottom: 138px;
       width: 106px;
       height: 106px;
-      z-index: 1000;
       background: url('@/static/nooleke_2.png') no-repeat center center;
       transition: background 500ms ease-in-out;
   }
@@ -87,7 +94,7 @@ export default {
 
   .banner-button-container {
     position: absolute;
-    margin-top: 30px;
+    top: 130px;
     left: 28px;
     z-index: 10;
   }
@@ -115,27 +122,18 @@ export default {
     .banner-title {
       font-size: 75px;
       line-height: 90px;
-      margin-top: 250px;
     }
   }
 
   @media screen and (max-width: 1540px){
+    .banner {
+      padding: 50px;
+    }
     .banner-title {
       font-size: 65px;
       line-height: 80px;
-      margin: 200px 100px auto 100px;
-    }
-    .arrow-down {
-      bottom: 80px;
-    }
-  }
-
-  @media screen and (max-width: 1300px){
-    .banner-title {
-      margin-top: 170px;
-    }
-    .arrow-down {
-      bottom: 60px;
+      margin-left: 100px;
+      margin-right: 100px;
     }
   }
 
@@ -143,6 +141,10 @@ export default {
     .current-date {
       display: inline;
       color: #fff;
+    }
+
+    .banner-button-container {
+      top: 80px;
     }
 
     .banner-button-container button {
@@ -154,10 +156,6 @@ export default {
     .banner-title {
       font-size: 46px;
       line-height: 54px;
-      margin-top: 80px;
-    }
-    .arrow-down {
-      bottom: 40px;
     }
   }
 
@@ -165,18 +163,17 @@ export default {
     .banner-title {
       font-size: 38px;
       line-height: 46px;
-      margin-top: 80px;
-    }
-    .arrow-down {
-      bottom: 10px;
     }
   }
 
   @media screen and (max-width: 800px) and (orientation: landscape) {
+    .banner {
+      padding-top: 80px;
+      padding-bottom: 20px;
+    }
     .banner-title {
       font-size: 28px;
       line-height: 34px;
-      margin-top: 70px;
     }
   }
 
@@ -188,10 +185,6 @@ export default {
     .banner-title {
       font-size: 22px;
       line-height: 26px;
-      margin-top: 50px;
-    }
-    .arrow-down {
-      bottom: 5px;
     }
   }
 
@@ -203,7 +196,6 @@ export default {
     .banner-title {
       font-size: 28px;
       line-height: 34px;
-      margin-top: 30%;
     }
   }
 
@@ -215,10 +207,6 @@ export default {
     .banner-title {
       font-size: 36px;
       line-height: 45px;
-      margin-top: 40%;
-    }
-    .arrow-down {
-      bottom: 80px;
     }
   }
 
@@ -230,12 +218,8 @@ export default {
     .banner-title {
       font-size: 36px;
       line-height: 45px;
-      margin-top: 40%;
       margin-left: 40px;
       margin-right: 40px;
-    }
-    .arrow-down {
-      bottom: 50px;
     }
   }
 
@@ -247,12 +231,8 @@ export default {
     .banner-title {
       font-size: 28px;
       line-height: 34px;
-      margin-top: 40%;
       margin-left: 20px;
       margin-right: 20px;
-    }
-    .arrow-down {
-      bottom: 50px;
     }
   }
 </style>

@@ -18,13 +18,6 @@ import Banner from '@/components/Banner'
 import Article from '@/components/NewsArticle'
 
 export default {
-  mounted: () => {
-    const screenHeight = window.innerHeight
-    const navbarHeight = document.querySelector('.navbar').offsetHeight
-
-    const banner = document.querySelector('.banner')
-    banner.style.height = (screenHeight - navbarHeight) + 'px'
-  },
   async fetch({store}) {
       if (store.getters.articles.length === 0) {
         await store.dispatch('fetchArticles')

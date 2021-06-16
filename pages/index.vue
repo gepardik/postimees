@@ -22,7 +22,7 @@
 <script>
 import Navbar from '@/components/Navbar'
 import Banner from '@/components/Banner'
-import Article from '@/components/ArticleItem'
+import Article from '@/components/NewsArticle'
 
 export default {
   mounted: () => {

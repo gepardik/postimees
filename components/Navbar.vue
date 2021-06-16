@@ -18,7 +18,7 @@
                   </a>
                 </div>
             </div>
-            <div class="navbar-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, voluptatem?</div>
+            <div class="navbar-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, voluptatem</div>
             <div class="d-flex">
                 <ul class="navbar-nav social-media">
                     <li class="nav-item d-flex flex-column justify-content-center mx-2"><a :href="facebook" target="_blank"><img src="@/static/Facebook.png" alt="Facebook"></a></li>

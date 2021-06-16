@@ -30,7 +30,7 @@ export default {
         const month = new Intl.DateTimeFormat('et-EE', { month: 'short' }).format(date)
         const day = new Intl.DateTimeFormat('et-EE', { day: '2-digit' }).format(date)
         const hour = new Intl.DateTimeFormat('et-EE', { hour: 'numeric' }).format(date)
-        const minute = new Intl.DateTimeFormat('et-EE', { minute: '2-digit' }).format(date)
+        const minute = new Intl.DateTimeFormat('et-EE', { minute: 'numeric' }).format(date)
         return (`${day}. ${month} ${year} ${hour}:${minute}`).toLowerCase()
       }
     }
@@ -199,9 +199,24 @@ export default {
     }
   }
 
+  @media screen and (orientation: portrait) and (min-width: 700px) {
+    .banner-title {
+      font-size: 38px;
+      line-height: 44px;
+    }
+  }
+
+  @media screen and (orientation: portrait) and (min-width: 1000px) {
+    .banner-title {
+      font-size: 58px;
+      line-height: 68px;
+    }
+  }
+
   @media screen and (max-width: 600px) and (orientation: portrait) {
-    .banner-button-container {
-      margin-top: 10px;
+    .banner {
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .banner-title {
@@ -212,20 +227,27 @@ export default {
 
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .banner-button-container {
-      margin-top: 10px;
+      top: 50px;
     }
-
     .banner-title {
-      font-size: 36px;
-      line-height: 45px;
-      margin-left: 40px;
-      margin-right: 40px;
+      font-size: 28px;
+      line-height: 36px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 
   @media screen and (max-width: 350px) and (orientation: portrait) {
+    .banner {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
     .banner-button-container {
-      margin-top: 10px;
+      top: 50px;
+    }
+
+    .banner-button-container button {
+      padding-left: 0;
     }
 
     .banner-title {

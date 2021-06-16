@@ -301,7 +301,7 @@ export default {
     }
     @media (orientation: portrait) {
       .banner {
-        padding-top: 76px;
+        padding-top: 80px;
         padding-left: 20px;
         padding-right: 20px;
       }

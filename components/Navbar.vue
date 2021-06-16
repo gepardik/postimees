@@ -57,10 +57,6 @@ export default {
         z-index: 100;
     }
 
-    .navbar a {
-      text-decoration: none;
-    }
-
     .navbar-brand {
       padding: 28px;
     }
@@ -75,12 +71,17 @@ export default {
         padding: 8px;
     }
 
+    .navbar-toggler:focus, .btn:focus {
+      box-shadow: none;
+    }
+
     .button-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 26px;
       transition: background-color 1000ms;
+      cursor: pointer;
     }
 
     .button-container.highlighted, .button-container:hover {
@@ -110,25 +111,31 @@ export default {
       }
     }
 
-    @media screen and (max-width: 1300px) {
-      .navbar-text, .social-media {
+    @media screen and (max-width: 1280px) {
+      .navbar-text {
         display: none;
       }
+    }
 
+    @media screen and (max-width: 1100px) {
+      .social-media {
+        display: none;
+      }
+      .button-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
       .button-container.highlighted {
         background-color: #1ba6e2;
       }
-
       .social-share {
         display: block;
         background: url('@/static/share.png') no-repeat;
         width: 40px;
         height: 40px;
-        position: absolute;
-        top: 20px;
-        right: 110px;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
-
       .login-button {
         text-indent: -9999px;
         width: 40px;
@@ -136,45 +143,29 @@ export default {
         background: url('@/static/avatar.png') no-repeat;
         right: 80px;
       }
-
       .container-fluid {
         padding-right: 20px!important;
       }
     }
 
-    @media screen and (max-width: 700px) and (orientation: landscape) {
+    @media screen and (max-width: 600px){
       .navbar-brand {
-        padding: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
       }
 
       .button-container {
-        padding: 10px;
+        padding: 8px 12px;
       }
 
       .social-share {
-        top: 10px;
-        right: 100px;
+        margin: 8px 12px;
       }
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 450px){
       .navbar-brand {
-        display: none !important;
-      }
-
-      .button-container {
-        padding: 8px;
-      }
-
-      .social-share {
-        top: 8px;
-        right: 100px;
-      }
-    }
-
-    @media screen and (max-width: 380px) and (orientation: portrait) {
-      .navbar-brand {
-        display: none !important;
+        display: none!important;
       }
     }
 </style>

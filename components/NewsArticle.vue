@@ -776,8 +776,8 @@ a.headline:hover {
     a.headline,
     a.headline:hover {
       margin: 10px!important;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 28px;
+      line-height: 34px;
     }
     .article-text, .article:nth-child(odd) .article-text {
       margin: 10px;

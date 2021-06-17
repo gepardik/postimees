@@ -150,8 +150,8 @@ a.headline:hover {
     height: 190px;
   }
   .article-text {
-     margin: 60px 700px 60px 130px;
-     height: 180px;
+     margin: 60px 700px 52px 130px;
+     height: 188px;
    }
   .article:nth-child(odd) .article-text {
     margin-left: 700px;
@@ -288,7 +288,8 @@ a.headline:hover {
       margin-left: 90px;
     }
     .article-text {
-      margin: 50px 400px 50px 90px;
+      margin: 50px 400px 60px 90px;
+      height: 190px;
     }
     .article:nth-child(odd) .article-text {
       margin-left: 400px;
@@ -335,7 +336,8 @@ a.headline:hover {
       margin-left: 50px;
     }
     .article-text {
-      margin: 30px 350px 30px 50px;
+      margin: 30px 350px 26px 50px;
+      height: 160px;
     }
     .article:nth-child(odd) .article-text {
       margin-left: 350px;
@@ -547,7 +549,7 @@ a.headline:hover {
     }
     .article-text {
       margin: 20px;
-      height: 80px;
+      height: 77px;
     }
     .article:nth-child(odd) .article-text {
       margin-left: 20px;
@@ -566,6 +568,14 @@ a.headline:hover {
     .number-circle {
       width: 60px;
       height: 60px;
+    }
+    @media (min-height: 410px) {
+      a.headline,
+      a.headline:hover {
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 50px;
+      }
     }
   }
   @media (orientation: portrait) {

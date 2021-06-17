@@ -77,7 +77,7 @@ export default {
       transition: background 500ms ease-in-out;
   }
 
-  .arrow-down:hover {
+  .arrow-down:hover, .arrow-down:active {
     background: url('@/static/nooleke_1.png') no-repeat center center;
   }
 
@@ -107,7 +107,7 @@ export default {
     transition: background-color 1000ms;
   }
 
-  .banner-button-container:hover button {
+  .banner-button-container:hover button, .banner-button-container:active button {
     background-color: rgba(255, 255, 255, 1);
   }
 

@@ -501,7 +501,7 @@ a.headline:hover {
       width: 80px;
       height: 80px;
     }
-    @media (max-height: 400px) {
+    @media (max-height: 420px) {
       .article-text {
         overflow: hidden;
       }

@@ -14,11 +14,6 @@
 import Navbar from '@/components/Navbar'
 
 export default {
-  async fetch({store}) {
-    if (store.getters.section === null) {
-      await store.dispatch('fetchSection')
-    }
-  },
   computed: {
     section() {
       return this.$store.getters.section

@@ -7,7 +7,7 @@
         :images="article.thumbnail.sources"
         :headline="article.headline"
         :number="index + 1"
-        :text="article.editorsChoice.articleLead[0].html"
+        :text="article.editorsChoice.articleLead[0].html.substr(0, 255) + '...'"
         :link="domain + '/' + article.id"
       />
   </div>
@@ -19,8 +19,8 @@ import Article from '@/components/NewsArticle'
 
 export default {
   async fetch({store}) {
-      if (store.getters.articles.length === 0) {
-        await store.dispatch('fetchArticles')
+      if (store.getters['articles/articles'].length === 0) {
+        await store.dispatch('articles/fetchArticles')
       }
       if (store.getters.section === null) {
         await store.dispatch('fetchSection')
@@ -28,7 +28,7 @@ export default {
     },
     computed: {
       articles() {
-        return this.$store.getters.articles
+        return this.$store.getters['articles/articles']
       },
       section() {
         return this.$store.getters.section

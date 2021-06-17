@@ -669,6 +669,7 @@ a.headline:hover {
       margin: 30px;
       font-size: 24px;
       line-height: 32px;
+      overflow: hidden;
     }
     .article-number {
       font-size: 26px;

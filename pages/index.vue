@@ -7,7 +7,7 @@
         :images="article.thumbnail.sources"
         :headline="article.headline"
         :number="index + 1"
-        :text="article.editorsChoice.articleLead[0].html.substr(0, 255) + '...'"
+        :text="articleLeads[index]"
         :link="domain + '/' + article.id"
       />
   </div>
@@ -16,6 +16,7 @@
 <script>
 import Banner from '@/components/Banner'
 import Article from '@/components/NewsArticle'
+import sanitizeHtml from 'sanitize-html'
 
 export default {
   async fetch({store}) {
@@ -29,6 +30,17 @@ export default {
     computed: {
       articles() {
         return this.$store.getters['articles/articles']
+      },
+      articleLeads() {
+        const articleArrSanitized = this.articles.map(item => {
+          let str = item.editorsChoice.articleLead[0].html
+          str = str.replace(/<\/?[^>]+(>|$)/g, "")
+          str = str.substr(0, 255).trim()
+          str += '...'
+          return str
+        })
+
+        return articleArrSanitized
       },
       section() {
         return this.$store.getters.section

@@ -501,6 +501,11 @@ a.headline:hover {
       width: 80px;
       height: 80px;
     }
+    @media (max-height: 400px) {
+      .article-text {
+        overflow: hidden;
+      }
+    }
   }
   @media (orientation: portrait) {
     a.headline,

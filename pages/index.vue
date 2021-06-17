@@ -34,10 +34,13 @@ export default {
       articleLeads() {
         const articleArrSanitized = this.articles.map(item => {
           let str = item.editorsChoice.articleLead[0].html
-          str = str.replace(/<\/?[^>]+(>|$)/g, "")
-          str = str.substr(0, 255).trim()
-          str += '...'
-          return str
+          str = str.replace(/<\/?[^>]+(>|$)/g, '')
+
+          if (str.length <= 255) {
+            return str.trim()
+          }
+
+          return str.substr(0, 255).trim()
         })
 
         return articleArrSanitized

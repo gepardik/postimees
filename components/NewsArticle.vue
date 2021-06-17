@@ -81,13 +81,11 @@ a.headline:hover {
   font-size: 40px;
   line-height: 48px;
   z-index: 10;
-  overflow: hidden;
 }
 
 .article-text {
   margin: 65px 875px 65px 130px;
   height: 216px;
-  overflow: hidden;
 }
 
 .article:nth-child(odd) .article-text {
@@ -382,7 +380,6 @@ a.headline:hover {
     }
     .article-text {
       margin: 50px 80px 50px 80px;
-      overflow: hidden;
     }
     .article:nth-child(odd) .article-text {
       margin-left: 80px;

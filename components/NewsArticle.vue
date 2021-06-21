@@ -86,6 +86,7 @@ a.headline:hover {
 .article-text {
   margin: 65px 875px 65px 130px;
   height: 216px;
+  overflow: hidden;
 }
 
 .article:nth-child(odd) .article-text {

@@ -33,6 +33,9 @@ export default {
       },
       articleLeads() {
         const articleArrSanitized = this.articles.map(item => {
+          if (!item.editorsChoice.articleLead || item.editorsChoice.articleLead.length === 0) {
+            return 'no data'
+          }
           let str = item.editorsChoice.articleLead[0].html
           str = str.replace(/<\/?[^>]+(>|$)/g, '')
 
